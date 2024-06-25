@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  frontend:
+    build:
+      context: .devcontainer
+      dockerfile: Dockerfile
+    container_name: test-vite_frontend_container
+    volumes:
+      - ".:/home/node/workspace"
+      - "test-vite_frontend_node_modules:/home/node/workspace/app/frontend/node_modules"
+    working_dir: /home/node/workspace/app/frontend
+    tty: true
+    stdin_open: true
+
+volumes:
+  test-vite_frontend_node_modules:
