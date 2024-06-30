@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '@/src/App';
 import { test, expect } from 'vitest'
+
 test('should first', async () => {
   // Appコンポーネントを描画
   render(<App />);
