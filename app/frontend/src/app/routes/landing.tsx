@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router'
 
 import logo from '@/src/assets/react.svg'
 import { Button } from '@/src/components/ui/Button'
+import { ModeToggle } from '@/src/components/ui'
 
 export const LandingRoute = () => {
   const navigate = useNavigate()
@@ -21,6 +22,9 @@ export const LandingRoute = () => {
           <div className="mt-8 flex justify-center">
             <div className="inline-flex rounded-md shadow">
               <Button onClick={handleStart}>Get started</Button>
+            </div>
+            <div className="inline-flex rounded-md shadow">
+              <ModeToggle />
             </div>
             <div className="ml-3 inline-flex">
               <a
