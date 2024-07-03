@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
-import { Button } from '@/src/components/ui/Button';
+import type { Meta, StoryObj } from '@storybook/react'
+import { fn } from '@storybook/test'
+import { Button } from '@/src/components/ui/Button'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -15,65 +15,64 @@ const meta = {
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Button>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 const Template: Story = {
   args: {
     variant: 'default',
     size: 'default',
-    children: 'Lolem ipsum'
+    children: 'Lolem ipsum',
   },
-};
+}
 export const Middle: Story = {
-  ...Template
-};
+  ...Template,
+}
 
 export const Small: Story = {
   args: {
     ...Template.args,
     size: 'sm',
   },
-};
+}
 
 export const Large: Story = {
   args: {
     ...Template.args,
     size: 'lg',
   },
-};
+}
 
 export const Destructive: Story = {
   args: {
     ...Template.args,
     variant: 'destructive',
   },
-};
+}
 export const Ghost: Story = {
   args: {
     ...Template.args,
     variant: 'ghost',
   },
-};
+}
 export const Link: Story = {
   args: {
     ...Template.args,
     variant: 'link',
   },
-};
+}
 export const Outline: Story = {
   args: {
     ...Template.args,
     variant: 'outline',
   },
-};
+}
 export const Secondary: Story = {
   args: {
     ...Template.args,
     variant: 'secondary',
   },
-};
-
+}
