@@ -1,16 +1,16 @@
-import { Moon, Sun } from 'lucide-react'
+import { Moon, Sun } from "lucide-react";
 
-import { Button } from '@/src/components/ui/Button'
+import { Button } from "@/src/components/ui/Button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/src/components/ui/Dropdown-menu'
-import { useShadcnTheme } from '@/src/provider/theme/shadui-cn'
+} from "@/src/components/ui/Dropdown-menu";
+import { useShadcnTheme } from "@/src/provider/theme/shadui-cn";
 
 export function ModeToggle() {
-  const { setTheme } = useShadcnTheme()
+  const { setTheme } = useShadcnTheme();
 
   return (
     <DropdownMenu>
@@ -22,16 +22,16 @@ export function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme('light')}>
+        <DropdownMenuItem onClick={() => setTheme("light")}>
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')}>
+        <DropdownMenuItem onClick={() => setTheme("dark")}>
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('system')}>
+        <DropdownMenuItem onClick={() => setTheme("system")}>
           System
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { ModeToggle } from '@/src/components/ui'
+import { ModeToggle } from "@/src/components/ui";
 
 export function ExampleRoute() {
   return (
@@ -9,5 +9,5 @@ export function ExampleRoute() {
         </div>
       </div>
     </>
-  )
+  );
 }

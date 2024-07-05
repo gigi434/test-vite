@@ -1,15 +1,15 @@
-import { useNavigate } from 'react-router'
+import { useNavigate } from "react-router";
 
-import logo from '@/src/assets/react.svg'
-import { Button } from '@/src/components/ui/Button'
-import { ModeToggle } from '@/src/components/ui'
+import logo from "@/src/assets/react.svg";
+import { Button } from "@/src/components/ui/Button";
+import { ModeToggle } from "@/src/components/ui";
 
 export const LandingRoute = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleStart = () => {
-    navigate('/app')
-  }
+    navigate("/app");
+  };
   return (
     <>
       <div className="flex h-screen items-center bg-white">
@@ -39,5 +39,5 @@ export const LandingRoute = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};

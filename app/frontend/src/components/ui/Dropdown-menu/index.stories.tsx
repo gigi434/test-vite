@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react'
-import { useState } from 'react'
+import type { Meta, StoryObj } from "@storybook/react";
+import { useState } from "react";
 // Import all Dropdown Menu components
 import {
   DropdownMenu,
@@ -11,31 +11,31 @@ import {
   DropdownMenuSeparator,
   DropdownMenuRadioGroup,
   // ... other sub-components (if applicable)
-} from '@/src/components/ui'
+} from "@/src/components/ui";
 // Assuming your components are in a file named DropdownMenu.js
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof DropdownMenu> = {
-  title: 'shared/DropdownMenu',
+  title: "shared/DropdownMenu",
   component: DropdownMenu, // Use Trigger component for initial rendering
   parameters: {
-    layout: 'centered', // Center the component in the Canvas
+    layout: "centered", // Center the component in the Canvas
   },
   // This component will have an automatically generated Autodocs entry
-  tags: ['autodocs'],
-}
+  tags: ["autodocs"],
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 const Template: Story = {
   args: {
     // Provide default props for the Trigger component here
-    children: 'Dropdown Menu', // Text displayed on the trigger button
+    children: "Dropdown Menu", // Text displayed on the trigger button
   },
-}
+};
 
 // Define individual stories for different use cases
 
@@ -45,7 +45,7 @@ export const BasicDropdown: Story = {
   args: {
     children: (
       <DropdownMenu>
-        <DropdownMenuTrigger>{Template.args?.children}</DropdownMenuTrigger>{' '}
+        <DropdownMenuTrigger>{Template.args?.children}</DropdownMenuTrigger>{" "}
         {/* Use Trigger within DropdownMenu */}
         <DropdownMenuContent>
           <DropdownMenuItem>Option 1</DropdownMenuItem>
@@ -56,13 +56,13 @@ export const BasicDropdown: Story = {
       </DropdownMenu>
     ),
   },
-}
+};
 
 export const CheckboxDropdown: Story = {
   ...Template,
   render: (args) => {
-    const [showStatusBar, setShowStatusBar] = useState(true)
-    const [showActivityBar, setShowActivityBar] = useState(false)
+    const [showStatusBar, setShowStatusBar] = useState(true);
+    const [showActivityBar, setShowActivityBar] = useState(false);
 
     return (
       <DropdownMenu>
@@ -82,14 +82,14 @@ export const CheckboxDropdown: Story = {
           </DropdownMenuCheckboxItem>
         </DropdownMenuContent>
       </DropdownMenu>
-    )
+    );
   },
-}
+};
 
 export const RadioDropdown: Story = {
   ...Template,
   render: (args) => {
-    const [selectedValue, setSelectedValue] = useState('option1')
+    const [selectedValue, setSelectedValue] = useState("option1");
 
     return (
       <DropdownMenu>
@@ -111,6 +111,6 @@ export const RadioDropdown: Story = {
           </DropdownMenuRadioGroup>
         </DropdownMenuContent>
       </DropdownMenu>
-    )
+    );
   },
-}
+};
