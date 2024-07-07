@@ -11,8 +11,4 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./vitest.setup.ts'],
   },
-  resolve: {
-    // 注意 replacement にはプロジェクトルートからの絶対パスを指定する必要がある
-    alias: [{ find: '@', replacement: '/' }]
-  },
 })
