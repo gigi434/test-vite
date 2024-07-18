@@ -71,7 +71,7 @@
   },
   "lint-staged": {
     "*": [
-      "biome check --write --unsafe --no-errors-on-unmatched"
+      "biome check --write --organize-imports-enabled=true --no-errors-on-unmatched"
     ]
   }
 }
