@@ -1,7 +1,7 @@
+import { App } from "@/src/app";
 import { render, screen, waitFor } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { App } from "@/src/app";
-import { test, expect, vi, beforeEach } from "vitest";
+import { beforeEach, expect, test, vi } from "vitest";
 
 // useNavigateをモックする
 const mockedUseNavigate = vi.fn();

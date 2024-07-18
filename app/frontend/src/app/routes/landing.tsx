@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router";
 
 import logo from "@/src/assets/react.svg";
-import { Button } from "@/src/components/ui/Button";
 import { ModeToggle } from "@/src/components/ui";
+import { Button } from "@/src/components/ui/Button";
 
 export const LandingRoute = () => {
   const navigate = useNavigate();

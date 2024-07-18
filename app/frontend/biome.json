@@ -4,7 +4,12 @@
     "enabled": true
   },
   "files": {
-    "include": ["src/**/*.js", "src/**/*.ts", "src/**/*.jsx", "src/**/*.tsx"]
+    "include": [
+      "src/**/*.js",
+      "src/**/*.ts",
+      "src/**/*.jsx",
+      "src/**/*.tsx"
+    ]
   },
   "linter": {
     "enabled": true,
