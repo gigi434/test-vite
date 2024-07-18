@@ -1,5 +1,5 @@
-import { App } from "@/src/app";
 import React from "react";
+import { App } from "@/src/app";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
