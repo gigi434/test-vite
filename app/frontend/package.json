@@ -70,8 +70,9 @@
     "vitest": "^1.6.0"
   },
   "lint-staged": {
-    "**.{js|ts|cjs|mjs|d.cts|d.mts|jsx|tsx|json|jsonc}": [
-      "npx @biomejs/biome check --write --organize-imports-enabled=true --no-errors-on-unmatched"
+    "*": [
+      "prettier --write",
+      "eslint --fix"
     ]
   }
 }
