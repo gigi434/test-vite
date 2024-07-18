@@ -71,7 +71,7 @@
   },
   "lint-staged": {
     "**.{js|ts|cjs|mjs|d.cts|d.mts|jsx|tsx|json|jsonc}": [
-      "biome check --write --organize-imports-enabled --no-errors-on-unmatched"
+      "npx @biomejs/biome check --write --organize-imports-enabled=true --no-errors-on-unmatched"
     ]
   }
 }
