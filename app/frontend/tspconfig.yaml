@@ -1,0 +1,7 @@
+# generatedディレクトリに出力するように変更
+output-dir: "{cwd}/generated/lib/openapi"
+options:
+  "@typespec/openapi3":
+    emitter-output-dir: "{output-dir}/"
+emit:
+  - "@typespec/openapi3"
